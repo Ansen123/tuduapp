@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class TudulistComponent implements OnInit {
 
   constructor() { }
-  tuduData=[
+  tuduList=[
     {
       "userId": 1,
       "id": 1,
