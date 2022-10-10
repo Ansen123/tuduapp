@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "TuduApp": {
+    "tuduapp": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/tudu-app",
+            "outputPath": "dist/tuduapp",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "TuduApp:build:production"
+              "browserTarget": "tuduapp:build:production"
             },
             "development": {
-              "browserTarget": "TuduApp:build:development"
+              "browserTarget": "tuduapp:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -75,7 +75,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "TuduApp:build"
+            "browserTarget": "tuduapp:build"
           }
         },
         "test": {
@@ -99,6 +99,6 @@
     }
   },
   "cli": {
-    "analytics": "61687f33-9c22-4d5a-8914-da9a7054d78c"
+    "analytics": "7d493cb7-df74-48de-874c-5bbcb40b799a"
   }
 }
