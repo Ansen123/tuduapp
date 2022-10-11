@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-tudulist',
@@ -7,8 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TudulistComponent implements OnInit {
 
-  constructor() { }
-  tuduList=[]
+  constructor(private myapi:ApiService) {
+    this.fetchData()
+   }
+  fetchData=()=>{
+    this.myapi.viewTudus().subscribe(
+      (data)=>{
+        this.tuduList=data
+      }
+    )
+  }
+  
+  tuduList:any=[]
   
 
   ngOnInit(): void {
